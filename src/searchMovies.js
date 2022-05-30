@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import MovieCard from './movieCard';
-import { Link } from 'react-router-dom';
+
+
 
 
 export default function SearchMovies(){
@@ -24,11 +25,9 @@ export default function SearchMovies(){
         }
     }
     
+
     return (
-        <>
-            <Link to="/shows">
-                <button className='show-btn'>Switch to Show Search</button>
-            </Link>
+        <div className="Search-bar">
             <form className="form" onSubmit={searchMovies}>
                 <label className="label" htmlFor="query">Movie Name</label>
                 <input className="input" type="text" name="query"
@@ -42,6 +41,6 @@ export default function SearchMovies(){
                    <MovieCard movie={movie} key={movie.id} />
                 ))}
             </div>    
-        </>
+        </div>
     )
 }
