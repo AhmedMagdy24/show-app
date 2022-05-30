@@ -10,9 +10,9 @@ export default function App() {
     <BrowserRouter> 
       <div className="App">
       <div className="container">
-          <h1 className="title">React Movie Search</h1>
+          <h1 className="title">React Movie/Show Search</h1>
         <Routes>
-          <Route path="/" element={<SearchMovies />} />
+          <Route path="show-app/" element={<SearchMovies />} />
           <Route path="/shows" element={<Shows />} />
         </Routes>
         </div>
