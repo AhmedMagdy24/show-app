@@ -1,17 +1,39 @@
 import './App.css';
 import React from 'react';
-
 import SearchMovies from "./searchMovies";
+import Shows from "./shows";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-   <div className="container">
-        <h1 className="title">React Movie Search</h1>
-        <SearchMovies/>
+   
+    <BrowserRouter> 
+      <div className="App">
+      <div className="container">
+          <h1 className="title">React Movie Search</h1>
+        <Routes>
+          <Route path="/" element={<SearchMovies />} />
+          <Route path="/shows" element={<Shows />} />
+        </Routes>
+        </div>
       </div>
-    </div>
+      </BrowserRouter>
+       
+    
   );
 }
 
-export default App;
+
+
+
+/* 
+
+       
+        
+        
+        <SearchMovies />
+        <Shows />
+      
+  
+
+*/
